@@ -1,24 +1,52 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import Header from './components/Header';
+import BalanceSummary from './components/BalanceSummary/BalanceSummary';
+import RecentTransactions from './components/RecentTransactions/RecentTransactions';
+import AddTransaction from './components/AddTransaction';
+import MoveFunds from './components/MoveFunds';
+
 import './App.css';
+
+
+
+let transactions = [
+  {
+    id: 1,
+    amount: -40,
+    text: 'Groceries at Harris Teeter',
+    account: 'Checking'
+  },
+  {
+    id: 2,
+    amount: 40,
+    text: 'Tutoring Math',
+    account: 'Checking'
+  },
+  {
+    id: 3,
+    amount: 1000,
+    text: 'Payroll',
+    account: 'Savings',
+  },
+  {
+    id: 4,
+    amount: 10,
+    text: 'hello',
+    account: 'lalaland'
+  }
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <BalanceSummary />
+      <RecentTransactions transactions={transactions}/>
+      <div className='forms'>
+        <AddTransaction />
+        <MoveFunds />
+      </div>
     </div>
   );
 }
