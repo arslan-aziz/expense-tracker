@@ -14,31 +14,10 @@ class App extends React.Component {
 
   state = {
     transactions: [
-      TransactionModel(1, 'Harris Teeter', 'Checking', 'Bread and eggs', 'Groceries', 'Expense')
-      // {
-      //   id: 1,
-      //   amount: -40,
-      //   text: 'Groceries at Harris Teeter',
-      //   account: 'Checking'
-      // },
-      // {
-      //   id: 2,
-      //   amount: 40,
-      //   text: 'Tutoring Math',
-      //   account: 'Checking'
-      // },
-      // {
-      //   id: 3,
-      //   amount: 1000,
-      //   text: 'Payroll',
-      //   account: 'Savings',
-      // },
-      // {
-      //   id: 4,
-      //   amount: 10,
-      //   text: 'hello',
-      //   account: 'lalaland'
-      // }
+      TransactionModel(-40, 'Checking', 'Harris Teeter', 'Bread and eggs', 'Groceries', 'external'),
+      TransactionModel(-30, 'Checking', 'Amazon', 'masks', 'Misc', 'external'),
+      TransactionModel(1000, 'Job', 'Savings', 'payroll', 'Income', 'external'),
+      TransactionModel(500, 'Savings', 'Checking', '', '', 'internal')
     ]
     
   }
