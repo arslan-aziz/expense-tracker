@@ -1,7 +1,7 @@
 ## Expense Tracker
 ---
 ### Overview
-#### This project is web-based financial planning utility to track, categorize, and explore your income/expenses.
+#### This project is a web-based financial planning utility to track, categorize, and explore your income/expenses.
 
 ### How to run it
 Online: Not implemented yet. In the future the front-end application will be hosted on a static hosting site.
