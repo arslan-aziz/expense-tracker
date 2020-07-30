@@ -1,5 +1,7 @@
 import React from 'react';
 
+import TransactionModel from './models/TransactionModel';
+
 class MoveFunds extends React.Component{
 
     constructor(props) {
@@ -28,11 +30,23 @@ class MoveFunds extends React.Component{
         this.setState(result);
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault();
+
+        let amountInt = parseInt(this.state.amountText);
+
+        let newTransaction = TransactionModel(amountInt, this.state.fromText, this.state.toText, 
+                '', '', 'internal');
+
+        this.props.addTransaction(newTransaction);
+
+    }
+
     render() {
         return (
             <div className='MoveFunds'>
                 <h4 style={{marginBottom:'5px'}}>Move Funds</h4>
-                <form className='form'>
+                <form className='form' onSubmit={this.handleSubmit.bind(this)}>
                     <label className='form-label'>Move Amount</label>
                     <input
                         type='text'

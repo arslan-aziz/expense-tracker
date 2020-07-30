@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import Transaction from './Transaction.js';
+import Transaction from './RecentTransactionItem.js';
 
 import './RecentTransactions.css';
 
