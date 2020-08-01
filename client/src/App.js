@@ -3,6 +3,8 @@ import React from 'react';
 import Header from './components/Header';
 import BalanceSummary from './components/BalanceSummary/BalanceSummary';
 import CategoryAllocationChart from './components/BalanceSummary/CategoryAllocationChart';
+import CategoryAllocationChartD3 from './components/BalanceSummary/CategoryAllocationChartD3';
+import AccountAllocationChartD3 from './components/BalanceSummary/AccountAllocationChartD3';
 import RecentTransactions from './components/RecentTransactions/RecentTransactions';
 import AddTransaction from './components/AddTransaction';
 import MoveFunds from './components/MoveFunds';
@@ -33,9 +35,12 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <BalanceSummary transactions={this.state.transactions}/>
-        <CategoryAllocationChart />
+        <div className="charts">
+          <CategoryAllocationChartD3 transactions={this.state.transactions}/>
+          <AccountAllocationChartD3 transactions={this.state.transactions}/>
+        </div>
         <RecentTransactions transactions={this.state.transactions}/>
-        <div className='forms'>
+        <div className="forms">
           <AddTransaction addTransaction={this.addTransaction.bind(this)}/>
           <MoveFunds addTransaction={this.addTransaction.bind(this)}/>
         </div>

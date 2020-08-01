@@ -37,6 +37,13 @@ body {
     font-family: Arial;
 }
 
+.charts {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .forms {
     width: 80%;
     display: flex;
